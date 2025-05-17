@@ -6,8 +6,11 @@ public class Level_Controller : MonoBehaviour
     private int currentQuantityRecolectables;
     private int levelTotalRecolectable;
 
+    public static bool levelComplete = false;
+
     private void Start() 
     {
+        levelComplete = false;
         this.currentQuantityRecolectables = 0;
         this.levelTotalRecolectable = GameObject.FindObjectsOfType<Recolectable>().Length;
 
@@ -21,6 +24,7 @@ public class Level_Controller : MonoBehaviour
 
         if (this.currentQuantityRecolectables >= this.levelTotalRecolectable)
         {
+            levelComplete = true;
             GameObject.FindObjectOfType<UI_Controller>().ShowMessageLevel();
         }
     }

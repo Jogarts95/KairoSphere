@@ -70,3 +70,19 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# === Ignorar assets externos comprados o gratuitos ===
+Assets/Dungeon Floor Traps/
+Assets/DuNguyn/
+Assets/FC User Interface SFX [Lite]/
+Assets/HiTech/
+Assets/Matthew Guz/
+Assets/Piloto Studio/
+Assets/Prefabs/
+Assets/Sci_fi_Drones/
+Assets/Sci-Fi Texture Pack 1/
+Assets/SciFi UI Elements/
+Assets/ShootEmUp_Ships_And_Items/
+Assets/Ultimate 10 Plus Shaders/
+Assets/Ultimate_Sphere_and_Ball/
+Assets/Vector World/
