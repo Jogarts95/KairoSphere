@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {   
-    private float velocity = 5f;
+    private float velocity = 3.5f;
 
     private void Update() {
         float axisH = Input.GetAxis("Horizontal");
