@@ -4431,11 +4431,19 @@ MonoBehaviour:
   velocity: 3.5
   canMove: 1
   animator: {fileID: 0}
-  deathDelay: 2.5
-  youLoseUI: {fileID: 0}
+  deathDelay: 0.5
+  youLoseUI: {fileID: 9077917301089450944}
+  meshRenderer: {fileID: 809750348}
+  dissolveProperty: _DissolveAmount
+  dissolveMaterialTemplate: {fileID: 2100000, guid: 8fb517e8bda63084d8fb196ef3c2942a, type: 2}
 --- !u!4 &809750347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7277509626910152690, guid: 8b82cef862d4c7e49900269ca6713d97, type: 3}
+  m_PrefabInstance: {fileID: 1439868373}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &809750348 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 8409844131012603037, guid: 8b82cef862d4c7e49900269ca6713d97, type: 3}
   m_PrefabInstance: {fileID: 1439868373}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &810002374
@@ -7374,6 +7382,18 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 8409844131012603037, guid: 8b82cef862d4c7e49900269ca6713d97, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8409844131012603037, guid: 8b82cef862d4c7e49900269ca6713d97, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 341d46d12c509b542bd1f316dc7a0003, type: 2}
+    - target: {fileID: 8409844131012603037, guid: 8b82cef862d4c7e49900269ca6713d97, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: 971e94dd5c4ae98499edb43fad12f266, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
