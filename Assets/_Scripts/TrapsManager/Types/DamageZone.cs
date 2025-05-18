@@ -7,7 +7,11 @@ public class DamageZone : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("Jugador tocó la trampa");
-            // Aquí puedes reiniciar, quitar vida, etc.
+            Ball ball = other.GetComponent<Ball>();
+            if (ball != null)
+            {
+                ball.KillPlayer();
+            }
         }
     }
 }

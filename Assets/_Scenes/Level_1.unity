@@ -4428,6 +4428,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc110c8fd503553409155d23b1241386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  velocity: 3.5
+  canMove: 1
+  animator: {fileID: 0}
+  deathDelay: 2.5
+  youLoseUI: {fileID: 0}
 --- !u!4 &809750347 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7277509626910152690, guid: 8b82cef862d4c7e49900269ca6713d97, type: 3}
@@ -10423,7 +10428,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!199 &2009652565
 ParticleSystemRenderer:
   serializedVersion: 6
