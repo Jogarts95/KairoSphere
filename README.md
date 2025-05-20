@@ -100,7 +100,4 @@ El nombre combina:
 
 ---
 
-## ⚖️ Licencia
-
-Este proyecto está bajo licencia **MIT**. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
