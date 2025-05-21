@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Callbacks;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody))]
@@ -33,7 +32,7 @@ public class Ball : MonoBehaviour
         }
     }
 
-    private void Update()
+    protected virtual void Update()
     {
         if (!canMove || isDead) return;
         {
@@ -45,7 +44,7 @@ public class Ball : MonoBehaviour
 
     }
 
-    public void KillPlayer()
+    public virtual void KillPlayer()
     {
         if (isDead) return;
         isDead = true;
