@@ -1,18 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using TMPro;
 
 public class AuthManager : MonoBehaviour
 {
-    public InputField usernameInput;
-
+    public TextMeshProUGUI usernameInput;
     private string savedUsernameKey = "username";
+    private bool redirected = false;
 
     void Start()
     {
-        // Si ya hay usuario, ir directo al menú
-        if (PlayerPrefs.HasKey(savedUsernameKey))
+        bool hasName = PlayerPrefs.HasKey(savedUsernameKey);
+        bool hasWallet = PlayerPrefs.HasKey("wallet");
+
+        if (hasName || hasWallet)
         {
+            SceneManager.LoadScene("Main_Menu");
+        }
+    }
+
+    void Update()
+    {
+        if (!redirected && PlayerPrefs.HasKey("wallet"))
+        {
+            redirected = true;
+            Debug.Log("Wallet detectada en tiempo real, redirigiendo...");
             SceneManager.LoadScene("Main_Menu");
         }
     }
@@ -29,6 +42,7 @@ public class AuthManager : MonoBehaviour
 
     public void ConnectWallet()
     {
-        Application.OpenURL("http://localhost:3000/connect"); // reemplaza con tu web companion
+        Debug.Log("🔁 Abriendo navegador hacia companion...");
+        Application.OpenURL("https://kairowalletconnect.vercel.app/connect");
     }
 }

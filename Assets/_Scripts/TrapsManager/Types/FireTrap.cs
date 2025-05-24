@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class FireTrap : TrapBase
 {
-
     [SerializeField] private ParticleSystem fireEffect;
     [SerializeField] private float damage = 100f;
 
@@ -11,6 +10,11 @@ public class FireTrap : TrapBase
         if (other.CompareTag("Player"))
         {
             Activate();
+            Ball ball = other.GetComponent<Ball>();
+            if (ball != null)
+            {
+                ball.KillPlayer();
+            }
             Debug.Log("Player tocó fuego");
         }
     }
@@ -31,3 +35,4 @@ public class FireTrap : TrapBase
         }
     }
 }
+

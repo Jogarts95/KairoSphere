@@ -6,7 +6,7 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     [Header("Movements Settings")]
-    [SerializeField] private float velocity = 3.5f;
+    [SerializeField] private float velocity = 10f;
     [SerializeField] private bool canMove = true;
 
     [Header("Death Settings")]
